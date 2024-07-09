@@ -4,11 +4,16 @@ namespace App\Http\Controllers\Guest;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Train;
 
 class PageController extends Controller
 {
     public function index(){
 
-        return view('welcome');
+        $today = \Carbon\Carbon::today()->toDateString();
+
+        $trains = Train::where('partenza_data', $today)->get();
+
+        return view('welcome', compact('trains'));
     }
 }
