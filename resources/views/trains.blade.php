@@ -3,7 +3,7 @@
 @section('main')
 
     <div class="container mt-5">
-        <div class="row">
+        <div class="row align-items-center justify-content-center">
             @foreach ($trains as $train)
                 <div class="col-4">
         
