@@ -13,6 +13,7 @@ class PageController extends Controller
         $today = \Carbon\Carbon::today()->toDateString();
 
         $trains = Train::where('partenza_data', $today)->get();
+        // $trains = Train::where('partenza_data', '>=', now())->get();
 
         return view('welcome', compact('trains'));
     }

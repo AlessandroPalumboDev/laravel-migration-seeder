@@ -2,17 +2,11 @@
 
 @section('main')
 
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
-            {{-- <div class="col">
-                <img src="{{ Vite::asset('resources/img/pipistrello.jpg')}}" alt="">
-                <ul>
-                    <li><a href="">prova list item e link</a></li>
-                </ul>
-            </div> --}}
             @foreach ($trains as $train)
 
-            <div class="card">
+            <div class="card my-2 p-3">
                 <p>Treno numero: {{ $train["codice_treno"] }}</p>
                 <p>In partenza da: {{ $train["stazione_partenza"] }}</p>
                 <p>Alle ore: {{ $train["partenza_orario"] }}</p>
